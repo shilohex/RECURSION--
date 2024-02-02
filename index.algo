@@ -1,16 +1,23 @@
-FUNCTION palindrome(word) : STRING
+FUNCTION palindrome(word : STRING) : STRING
 VAR
-    sub : STRING:= "";
+    sub : STRING := "";
 BEGIN
-    IF (word.lenght= 1 OR word.lenght=0) THEN
-        RETURN "IT IS PALINDROME" ;
+    //  Check if the length of the word is 0 or 1, it is a palindrome
+    IF (LENGTH(word) = 1 OR LENGTH(word) = 0) THEN
+        RETURN "IT IS PALINDROME";
     END_IF
-    IF (word(0)== word(word.lenght-1)) THEN
-        FOR i FROM 1 TO word.lenght-2 STEP step  DO
-            sub = sub + word[i]
+
+    //  Check if the first and last characters are the same
+    IF (word(0) = word(LENGTH(word) - 1)) THEN
+        -- Iterate through the substring excluding the first and last characters
+        FOR i FROM 1 TO LENGTH(word) - 2 DO
+            -- Build the substring for recursion
+            sub := sub + word[i];
         END_FOR
-        RETURN palindrome(sub)
+        //  Recursively call the function with the substring
+        RETURN palindrome(sub);
     ELSE
-    RETURN "IT IS NOT PALINDROME" ;
+        //  If the first and last characters are not the same, it is not a palindrome
+        RETURN "IT IS NOT PALINDROME";
     END_IF
 END
