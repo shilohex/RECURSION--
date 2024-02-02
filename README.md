@@ -1,57 +1,46 @@
-# Project Name
+# Palindrome Checker
 
-Short description or tagline about your project.
+A simple recursive function to check if a given word is a palindrome.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Features](#features)
+- [Usage](#usage)
+- [How it Works](#how-it-works)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
 - [Examples](#examples)
 - [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
-Provide a brief introduction to your project, explaining its purpose and key features.
-
-## Features
-
-List the key features or functionalities of your project.
-
-## Getting Started
-
-Provide instructions on how to get the project up and running on a local machine.
-
-### Prerequisites
-
-List any dependencies or prerequisites that users need to have installed.
-
-### Installation
-
-Step-by-step instructions on how to install and set up the project.
+This code contains a recursive function named `palindrome` that checks whether a given word is a palindrome or not. A palindrome is a word that reads the same backward as forward.
 
 ## Usage
 
-Explain how to use your project. Include code snippets or examples if applicable.
+To use the palindrome checker, you can call the `palindrome` function with a word as an argument. The function will return either "IT IS PALINDROME" or "IT IS NOT PALINDROME" based on whether the input word is a palindrome or not.
 
-## Examples
+```pseudo
+result = palindrome("level")
+print(result)  // Output: IT IS PALINDROME
+How it Works
+The palindrome function follows a recursive approach to check for palindromes. It compares the first and last characters of the word and recursively calls itself with a substring, excluding the first and last characters, if the characters match.
 
-Provide examples or use cases to help users understand how to use your project effectively.
+Getting Started
+Prerequisites
+Ensure you have a platform with support for the chosen programming language where you can run the palindrome checker.
 
-## Contributing
+Installation
+No installation is required for this code. Simply copy the palindrome function and use it in your project.
 
-Explain how others can contribute to your project. Include guidelines for pull requests and any code of conduct.
+Examples
+You can find examples of how to use the palindrome checker in the Examples section of this README.
 
-## License
+Contributing
+If you'd like to contribute to this project, please follow the guidelines outlined in the Contributing file.
 
-Specify the license under which your project is distributed.
-
-## Acknowledgments
-
-Acknowledge any external libraries, resources, or individuals you want to credit.
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
