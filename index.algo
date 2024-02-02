@@ -1,6 +1,16 @@
-ALGORITHM algorithm_name
+FUNCTION palindrome(word) : STRING
 VAR
-    set_declarations
+    sub : STRING:= "";
 BEGIN
-    set_instructions
+    IF (word.lenght= 1 OR word.lenght=0) THEN
+        RETURN "IT IS PALINDROME" ;
+    END_IF
+    IF (word(0)== word(word.lenght-1)) THEN
+        FOR i FROM 1 TO word.lenght-2 STEP step  DO
+            sub = sub + word[i]
+        END_FOR
+        RETURN palindrome(sub)
+    ELSE
+    RETURN "IT IS NOT PALINDROME" ;
+    END_IF
 END
